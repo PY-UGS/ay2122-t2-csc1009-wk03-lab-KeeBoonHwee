@@ -35,14 +35,17 @@ public class Loan
     {
         return this.annualInterestRate;
     }
+    
     public int getNumberOfYears()
     {
         return this.numberOfYears;
     }
+
     public double getLoanAmount()
     {
         return this.loanAmount;
     }
+
     public Date getLoanDate()
     {
         return this.loanDate;

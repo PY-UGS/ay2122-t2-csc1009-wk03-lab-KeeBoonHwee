@@ -4,11 +4,19 @@ public class Main {
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
-        Loan loan = new Loan(2.5,5,1000);
+        System.out.print("Enter annual interest rate, for example, 8.25: ");
+        double annualInterestRate = input.nextDouble();
 
-        System.out.println("Loan annual interest rate is: " + loan.getAnnualInterestRate());
+        System.out.print("Enter number of years as an integer: ");
+        int numberOfYears = input.nextInt();
 
-        System.out.println("Loan monthly payment is: " + loan.getMonthlyPayment());
-        System.out.println("Loan total payment is: "   + loan.getTotalPayment());
+        System.out.print("Enter loan amount, for example, 120000.95: ");
+        double loanAmount = input.nextDouble();
+
+        Loan loan = new Loan(annualInterestRate, numberOfYears, loanAmount);
+
+        System.out.println("The loan was created on " + loan.getLoanDate());
+        System.out.println("The monthly payment is "  + String.format("%.2f",loan.getMonthlyPayment()) );
+        System.out.println("The total payment is "    + String.format("%.2f",loan.getTotalPayment()) );
     }
 }
