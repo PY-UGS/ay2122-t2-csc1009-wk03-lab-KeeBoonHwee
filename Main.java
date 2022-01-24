@@ -18,5 +18,7 @@ public class Main {
         System.out.println("The loan was created on " + loan.getLoanDate());
         System.out.println("The monthly payment is "  + String.format("%.2f",loan.getMonthlyPayment()) );
         System.out.println("The total payment is "    + String.format("%.2f",loan.getTotalPayment()) );
+
+        input.close();
     }
 }
