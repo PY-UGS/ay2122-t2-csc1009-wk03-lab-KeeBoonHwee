@@ -1,12 +1,14 @@
-import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args)
     {
-        Date date = new Date();
-        System.out.println("Date is " + date);
+        Scanner input = new Scanner(System.in);
+        Loan loan = new Loan(2.5,5,1000);
 
-        Loan loan = new Loan(date, 8888, 20, 0.08);
-        
+        System.out.println("Loan annual interest rate is: " + loan.getAnnualInterestRate());
+
+        System.out.println("Loan monthly payment is: " + loan.getMonthlyPayment());
+        System.out.println("Loan total payment is: "   + loan.getTotalPayment());
     }
 }
